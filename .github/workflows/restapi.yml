@@ -53,7 +53,7 @@ jobs:
               sam deploy \
               --stack-name  \
               --region \
-              --confrim-change-before-deploy yes\
+              --confirm-changeset yes\
               --disable-rollback no\
               --save-arguments-to-configuration-file yes\
               --SAM-configuration-file \

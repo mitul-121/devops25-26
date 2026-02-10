@@ -21,6 +21,7 @@ Resources:
         UsagePlan: 
           CreateUsagePlan: PER_API
           UsagePlanName: GatewayAuthorization
+          
 
   Database:
     Type: AWS::DynamoDB::Table
