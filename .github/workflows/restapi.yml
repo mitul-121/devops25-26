@@ -21,7 +21,7 @@ jobs:
               cd 46.intro_to_serverless
               sam build
           - name: Upload SAM build artifacts
-            uses: actions/upload-artifact@v3
+            uses: actions/upload-artifact@v4
             with:
               name: sam-build
               path: 46.intro_to_serverless/.aws-sam/build
