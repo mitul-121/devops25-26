@@ -20,6 +20,11 @@ jobs:
             run: |
               cd 46.intro_to_serverless
               sam build
+          - name: Upload SAM build artifacts
+            uses: actions/upload-artifact@v3
+            with:
+              name: sam-build
+              path: 46.intro_to_serverless/.aws-sam/build
             
     deploy:
         needs: build
