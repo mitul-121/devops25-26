@@ -51,9 +51,10 @@ jobs:
             run: |
               cd 46.intro_to_serverless
               sam deploy \
-              --stack-name MyStackName \
-              --region us-east-1 \
-              --capabilities CAPABILITY_IAM \
-              --parameter-overrides Param1=Value1 Param2=Value2 \
-              --no-confirm-changeset \
-              --resolve-s3
+              --stack-name  \
+              --region \
+              --confrim-change-before-deploy yes\
+              --disable-rollback no\
+              --save-arguments-to-configuration-file yes\
+              --SAM-configuration-file \
+              --SAM-configuration-environment 
