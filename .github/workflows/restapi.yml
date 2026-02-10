@@ -44,4 +44,10 @@ jobs:
           - name: deploy RESTapi
             run: |
               cd 46.intro_to_serverless
-              sam deploy --guided
+              sam deploy \
+              --stack-name MyStackName \
+              --region us-east-1 \
+              --capabilities CAPABILITY_IAM \
+              --parameter-overrides Param1=Value1 Param2=Value2 \
+              --no-confirm-changeset \
+              --resolve-s3
