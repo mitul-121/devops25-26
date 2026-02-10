@@ -8,8 +8,7 @@ Globals:
     Runtime: python3.12
     Environment:
       Variables:
-        TABLE_NAME: !Ref Database        
-        
+        TABLE_NAME: !Ref Database                
 
 Resources:
   CarsRestApi:
