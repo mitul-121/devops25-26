@@ -9,6 +9,7 @@ Globals:
     Environment:
       Variables:
         TABLE_NAME: !Ref Database              
+        
 
 Resources:
   CarsRestApi:
