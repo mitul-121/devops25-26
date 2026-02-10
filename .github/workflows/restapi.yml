@@ -1,0 +1,26 @@
+name: create RESTapi
+
+on:
+  push:
+    branches: [ main ]
+    paths: 
+      - '46.intro_to_serverless/**'
+    
+jobs:
+    build:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - uses: actions/checkout@v2
+          - name: Set up Python 3.8
+            uses: actions/setup-python@v2
+            with:
+              python-version: 3.8
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              pip install -r 46.intro_to_serverless/functions/requirements.txt
+          - name: create RESTapi
+            run: |
+              cd 46.intro_to_serverless
+              sam build
