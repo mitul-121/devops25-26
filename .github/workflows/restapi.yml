@@ -56,5 +56,3 @@ jobs:
               --confirm-changeset yes\
               --disable-rollback no\
               --save-arguments-to-configuration-file yes\
-              --SAM-configuration-file \
-              --SAM-configuration-environment 
