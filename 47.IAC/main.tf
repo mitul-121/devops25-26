@@ -30,7 +30,7 @@ resource "aws_lambda_function" "my_lambda" {
   runtime       = "python3.8"
   filename      = data.archive_file.lambda_function.output_path
 
-  # runtime = "python3.8"  # This line is removed to avoid duplication
+
   environment {
     variables = {
       ENVIRONMENT = "production"
